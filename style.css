@@ -146,6 +146,7 @@ body {
 
 .small-pic img:hover {
     border: 2px solid var(--primary-orange);
+    opacity: 0.6;
 }
 
 
@@ -361,6 +362,7 @@ fill: var(--primary-orange);
 
 .small-pic1 img:hover {
     border: 2px solid var(--primary-orange);
+    opacity: 0.6;
 }
 
 

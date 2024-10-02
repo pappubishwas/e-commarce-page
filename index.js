@@ -33,10 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
       bigPic.src = smallPic.src.replace("-thumbnail", "");
       smallPics.forEach(function (pic) {
         pic.style.filter = "none";
+        pic.style.border = "none";
       });
 
-      smallPic.style.filter =
-        "grayscale(400%) sepia(400%) hue-rotate(20deg) saturate(55%) blur(1px)";
+      smallPic.style.filter ="opacity(30%)";
+      smallPic.style.border = "2px solid orange";
     });
   });
 
@@ -77,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateBigImageInPopup(index) {
     bigImagePopup.src = imageSources[index];
     smallPicsPopup.forEach((pic, idx) => {
-      pic.style.filter = idx === index ? "grayscale(400%) sepia(400%) hue-rotate(20deg) saturate(55%) blur(1px)" : "none";
+      pic.style.filter = idx === index ? "opacity(30%)" : "none";
+      pic.style.border = idx === index ? "2px solid orange" : "none";
     });
   }
 
